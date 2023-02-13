@@ -34,7 +34,6 @@ const config = {
   },
 
   scripts: [{ src: '//snack.expo.io/embed.js', defer: true }],
-  // plugins: ['./plugins/etta-ui-web.js'],
   presets: [
     [
       'classic',
