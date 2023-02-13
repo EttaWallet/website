@@ -1,0 +1,47 @@
+---
+title: Installation
+path: /installation/
+sidebar_position: 4
+---
+
+Install the EttaUI module:
+
+**npm**
+
+```
+npm install etta-ui
+```
+
+**Yarn**
+
+```
+yarn add etta-ui
+```
+
+Once you have installed the `etta-ui` module, you can start using the components on any screen. Like so:
+
+```jsx
+import { StyleSheet, Text } from 'react-native';
+import { Button, TypographyPresets, Colors } from 'etta-ui';
+
+const MyApp = () => (
+  <>
+    <Button
+      title="Click me"
+      size="default"
+      appearance="filled"
+      icon="icon-bitcoin-circle"
+      iconPosition="left"
+    />
+    <Text style={styles.text}>This is a button</Text>
+  </>
+);
+
+const styles = StyleSheet.create({
+  text: {
+    ...TypographyPresets.Body3,
+    color: Colors.orange.base,
+    marginVertical: 20,
+  },
+});
+```

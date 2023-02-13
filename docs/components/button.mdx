@@ -1,0 +1,114 @@
+---
+title: Button
+path: /components/button/
+sidebar_position: 1
+---
+
+A touchable, interactive element that initiates an action and or event. Buttons display text and can also include icons.
+
+## Usage
+
+```jsx
+import { Button } from 'etta-ui';
+
+<Button
+  title="Click me"
+  size="default"
+  appearance="filled"
+  icon="icon-bitcoin-circle"
+  iconPosition="left"
+/>;
+```
+
+## Props
+
+:::note
+Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props) props.
+:::
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                                                                                                         |
+| -------------- | -------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`        | `string`                               |           | Text to appear on the button                                                                                                                        |
+| `textStyle`    | TextStyle                              |           | Add additional styling for title component.                                                                                                         |
+| `appearance`   | `filled` \| `outline` \| `transparent` | `filled`  | Fill type of the button.                                                                                                                            |
+| `icon`         | IconNode                               |           | Displays an icon next to the button title. By default, it appears on the left of the title text. `iconPosition` can be used to specify its position |
+| `iconPosition` | `left` \| `right`                      | `left`    | Displays Icon to the position mentioned. Needs to be used along with `icon` prop.                                                                   |
+| `size`         | `default` \| `large` \| `small`        | `default` | Button size                                                                                                                                         |
+| `fullWidth`    | boolean                                | `false`   | Makes the button full width.                                                                                                                        |
+| `disabled`     | boolean                                | `false`   | Disables user interaction.                                                                                                                          |
+
+</div>
+
+## Showcase
+
+```SnackPlayer name=Button%20Example
+import React from 'react';
+import {
+  StyleSheet,
+  View,
+  SafeAreaView,
+  Text,
+  Alert,
+} from 'react-native';
+import { Button } from 'etta-ui';
+
+const Separator = () => <View style={styles.separator} />;
+
+const App = () => (
+  <SafeAreaView style={styles.container}>
+    <View>
+      <Button
+        title="Normal"
+        size="default"
+        appearance="filled"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
+       <Button
+        title="With Icon"
+        size="default"
+        appearance="filled"
+        icon="icon-arrow-up"
+        iconPosition="left"
+        onPress={() => Alert.alert('Icon Button pressed')}
+      />
+      <Button
+        title="Full width button"
+        size="default"
+        appearance="filled"
+        icon="icon-arrow-up"
+        iconPosition="left"
+        onPress={() => Alert.alert('Icon Button pressed')}
+        fullWidth={true}
+      />
+      <Button
+        title="Disabled button"
+        size="default"
+        appearance="filled"
+        icon="icon-arrow-up"
+        iconPosition="left"
+        onPress={() => Alert.alert('Icon Button pressed')}
+        disabled={true}
+      />
+    </View>
+    <Separator />
+    </View>
+  </SafeAreaView>
+);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 16,
+  },
+  separator: {
+    marginVertical: 8,
+    borderBottomColor: '#737373',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+});
+export default App;
+```
+
+---
