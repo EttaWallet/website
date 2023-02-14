@@ -1,0 +1,73 @@
+---
+title: Carousel
+path: /components/carousel/
+---
+
+import { View } from 'react-native';
+import { Carousel } from 'etta-ui';
+
+An interactive slider, usually used for onboarding and other educative content.
+
+## How to use it
+
+```jsx
+import { Carousel } from 'etta-ui';
+
+<Carousel
+    stepInfo={[{
+        title: "Manage your bitcoin",
+        text: "Have full control with this self-custody wallet. No one else can access your bitcoin.",
+        icon: 'icon-wallet-2',
+        iconBg: '#27AE60',
+    },{
+        title: "Convenient backups with cloud & manual storage",
+        text: "Your recovery phrase will be encrypted and backed up to your cloud provider, only you will be able to access it.",
+        icon: 'icon-cloud',
+        iconBg: '#BB6BD9',
+    },{
+        title: "Keep your wallet and bitcoin secure",
+        text: "Enable face detection or set a pin for extra security.",
+        icon: 'icon-safe',
+        iconBg: '#2D9CDB',
+    }]}
+    buttonText="Next"
+    finalButtonText="Continue"
+    onFinish={() => 0}
+    embeddedNavBar={false}
+    onCancel={() => 0}
+/>;
+```
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                        |
+| -------------- | -------------------------------------- | --------- | ------------------------------------------------------------------ |
+| `stepInfo`: [{ title: `string`, text: `string`, icon?: `string`, iconBg?: `string`}]      | JSON Array                               |           | A JSON array of all your slides                                    |
+| `buttonText`   | `string`                               |           | Text on button between slides                                      |
+| `finalButtonText`| `string`                             |           | Text on button at final slide                                      |
+| `onFinish`     | `function`                           |           | Function for when user presses button at the final slide           |
+| `embeddedNavBar` | `boolean`                            | `false`   | Adds a navBar with options on the Carousel. Specifically close/cancel |
+| `onCancel`     | `function`                           |           | Function for when user decides to skip/close the carousel via embedded navbar |
+
+</div>
+
+## Playground
+
+You can play with this component here. 
+
+:::note
+This particular component will render better on Android or IOS. For best results, use Expo Go on your own device. 
+:::
+
+<div
+  data-snack-id="@rukundo/carousel-example"
+  data-snack-platform="android"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+
+---

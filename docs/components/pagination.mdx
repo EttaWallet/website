@@ -1,0 +1,85 @@
+---
+title: Pagination
+path: /components/pagination/
+---
+
+import { View } from 'react-native';
+import { Pagination } from 'etta-ui';
+
+This element is used as an *atom* in a larger component that allows you to select a specific "page" from a set range of pages. Ideally, you will use this in a **[carousel](/docs/components/carousel)**.
+
+## How to use it
+
+```jsx
+import { Pagination } from 'etta-ui';
+
+<Pagination
+  selectedIndex={0}
+  count={4}
+/>;
+```
+
+## Variations
+
+### 5 pages with 3rd page as current
+
+<View>
+  <Pagination selectedIndex={2} count={5} />
+</View>
+
+### 3 pages with 2 page as current
+
+<View>
+  <Pagination selectedIndex={1} count={3} />
+</View>
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                                                                                                         |
+| -------------- | -------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `count`        | number                                 |           | Number of pages                                                                                                                        |
+| `selectedIndex`     | number                            |           | Selected or active page                                                                                                                          |
+
+</div>
+
+## Playground
+
+You can play with this component here
+
+```SnackPlayer name=Pagination%20Example
+import React from 'react';
+import {
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+} from 'react-native';
+import type { ViewStyle } from 'react-native';
+import { Pagination } from 'etta-ui';
+
+const paddedScrollView: ViewStyle = {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+};
+
+const App = () => (
+  <SafeAreaView style={styles.container}>
+    <ScrollView contentContainerStyle={paddedScrollView}>
+      <Pagination selectedIndex={2} count={5} />
+    </ScrollView>
+  </SafeAreaView>
+);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 16,
+  },
+});
+export default App;
+```
+
+---

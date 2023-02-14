@@ -1,16 +1,15 @@
 ---
 title: Button
 path: /components/button/
-sidebar_position: 1
 ---
 
 import { IconsStyle } from '@site/src/components/BitcoinIcons';
-import { View, Alert } from 'react-native';
+import { View } from 'react-native';
 import { Button } from 'etta-ui';
 
 A touchable, interactive element that initiates an action and or event. Buttons display text and can also include icons.
 
-## Usage
+## How to use it
 
 ```jsx
 import { Button } from 'etta-ui';
@@ -21,10 +20,11 @@ import { Button } from 'etta-ui';
   appearance="filled"
   icon="icon-bitcoin-circle"
   iconPosition="left"
+  onPress={doSomethingFn}
 />;
 ```
 
-## Variants
+## Variations
 
 ### Appearance
 
@@ -38,7 +38,7 @@ Buttons can appear filled, outline or transparent
 
 ### Size
 
-Buttons can be small, normal size, or large
+Buttons can be small, "normal size", or large
 
 <View style={{ flexDirection: 'row', alignItems: 'center'}}>
   <Button title="Small" size="small" style={{ marginHorizontal: 10 }} />
@@ -51,7 +51,9 @@ Buttons can be small, normal size, or large
 While all the buttons above appear active, they can also be disabled and therefore uninteractive.
 
 <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-  <Button title="Default" size="default" disabled={true} style={{ marginHorizontal: 10 }} />
+  <Button title="Filled & disabled" appearance="filled" size="default" disabled={true} style={{ marginHorizontal: 10 }} />
+  <Button title="Outline & disabled" appearance="outline" size="default" disabled={true} style={{ marginHorizontal: 10 }} />
+  <Button title="Transparent & disabled" appearance="transparent" size="default" disabled={true} style={{ marginHorizontal: 10 }} />
 </View>
 
 ### With Icons
@@ -59,8 +61,8 @@ While all the buttons above appear active, they can also be disabled and therefo
 <IconsStyle />
 
 <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-  <Button title="Icon on the left" icon="icon-arrow-up" iconPosition="left" onPress={() => Alert.alert('Icon Button pressed')} style={{ marginHorizontal: 10 }} />
-  <Button title="Icon on the right" icon="icon-arrow-right" iconPosition="right" onPress={() => Alert.alert('Icon Button pressed')} style={{ marginHorizontal: 10 }} />
+  <Button title="Icon on the left" icon="icon-arrow-up" iconPosition="left" style={{ marginHorizontal: 10 }} />
+  <Button title="Icon on the right" icon="icon-arrow-right" iconPosition="right" style={{ marginHorizontal: 10 }} />
 </View>
 
 ## Props
@@ -84,74 +86,17 @@ Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopaci
 
 </div>
 
-## Showcase
+## Playground
 
-```SnackPlayer name=Button%20Example
-import React from 'react';
-import {
-  StyleSheet,
-  View,
-  SafeAreaView,
-  Alert,
-} from 'react-native';
-import { Button } from 'etta-ui';
+You can play with this component here
 
-const Separator = () => <View style={styles.separator} />;
-
-const App = () => (
-  <SafeAreaView style={styles.container}>
-    <View>
-      <Button
-        title="Normal"
-        size="default"
-        appearance="filled"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <Separator />
-       <Button
-        title="With Icon"
-        size="default"
-        appearance="filled"
-        icon="icon-arrow-up"
-        iconPosition="left"
-        onPress={() => Alert.alert('Icon Button pressed')}
-      />
-      <Separator />
-      <Button
-        title="Full width button"
-        size="default"
-        appearance="filled"
-        icon="icon-arrow-up"
-        iconPosition="left"
-        onPress={() => Alert.alert('Icon Button pressed')}
-        fullWidth={true}
-      />
-      <Separator />
-      <Button
-        title="Disabled button"
-        size="default"
-        appearance="filled"
-        icon="icon-arrow-up"
-        iconPosition="left"
-        onPress={() => Alert.alert('Icon Button pressed')}
-        disabled={true}
-      />
-    </View>
-  </SafeAreaView>
-);
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    marginHorizontal: 16,
-  },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-});
-export default App;
-```
+<div
+  data-snack-id="@rukundo/button-example"
+  data-snack-platform="web"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
 
 ---
