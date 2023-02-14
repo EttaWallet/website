@@ -3,9 +3,6 @@ title: Carousel
 path: /components/carousel/
 ---
 
-import { View } from 'react-native';
-import { Carousel } from 'etta-ui';
-
 An interactive slider, usually used for onboarding and other educative content.
 
 ## How to use it
@@ -48,8 +45,8 @@ import { Carousel } from 'etta-ui';
 | `buttonText`   | `string`                               |           | Text on button between slides                                      |
 | `finalButtonText`| `string`                             |           | Text on button at final slide                                      |
 | `onFinish`     | `function`                           |           | Function for when user presses button at the final slide           |
-| `embeddedNavBar` | `boolean`                            | `false`   | Adds a navBar with options on the Carousel. Specifically close/cancel |
-| `onCancel`     | `function`                           |           | Function for when user decides to skip/close the carousel via embedded navbar |
+| `embeddedNavBar?` | `boolean`                            | `false`   | Adds a navBar with options on the Carousel. Specifically close/cancel |
+| `onCancel?`     | `function`                           |           | Function for when user decides to skip/close the carousel via embedded navbar |
 
 </div>
 

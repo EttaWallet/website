@@ -28,7 +28,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Components',
-      items: ['components/button', 'components/pagination', 'components/carousel'],
+      items: ['components/button', 'components/carousel', 'components/chip', 'components/keypad', 'components/pagination'],
       collapsed: false,
     },
   ],

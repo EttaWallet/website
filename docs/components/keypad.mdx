@@ -1,0 +1,48 @@
+---
+title: KeyPad
+path: /components/keypad/
+---
+
+A numeric keypad. Great for inputing amounts and PIN entry.
+
+## How to use it
+
+```jsx
+import { KeyPad } from 'etta-ui';
+
+<KeyPad 
+    onDigitPress={(digit) => void}
+    onBackspacePress={() => void}
+    onBackspaceLongPress={() => void}
+    onDecimalPress={() => void}
+    decimalSeparator="."
+/>;
+```
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                        |
+| -------------- | -------------------------------------- | --------- | ------------------------------------------------------------------ |
+| `onDigitPress`     | `function`: (digit) => void        |           | Takes the pressed digit as a prop. Define what happens with this digit when pressed           |
+| `onBackspacePress?` | `function`: () => void            | clears last digit | Define what happens when backspace button is pressed. |
+| `onBackspaceLongPress?`     | `function`: () => void    | clears all digits | Define what happens when backspace button is "long pressed". |
+| `onDecimalPress?`     | `function`: () => void          | adds decimal point after last digit | Define what happens when decimal button is pressed |
+| `decimalSeparator?`   | `string`                        | . (demimal point) | Input to display when decimal button is pressed  |
+
+</div>
+
+## Playground
+
+You can play with this component here. You will have better results with Expo Go on your own device.
+
+<div
+  data-snack-id="@rukundo/keypad-example"
+  data-snack-platform="web"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+---

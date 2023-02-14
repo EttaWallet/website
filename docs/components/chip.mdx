@@ -1,0 +1,76 @@
+---
+title: Chip
+path: /components/chip/
+---
+
+import { IconsStyle } from '@site/src/components/BitcoinIcons';
+import { View } from 'react-native';
+import { Chip } from 'etta-ui';
+
+Chips are small pressable elements used to display an attribute or initiate an action. They can display text and or icons.
+
+## How to use it
+
+```jsx
+import { Chip } from 'etta-ui';
+
+<Chip 
+    selected={false} 
+    icon="icon-bell" 
+    iconPosition="right">
+    Chip
+</Chip>;
+```
+
+## Variations
+
+### Default
+
+<View style={{ flexDirection: 'row', alignItems: 'center'}}>
+  <Chip style={{ marginHorizontal: 5 }}>Chip</Chip>
+  <Chip selected={true} style={{ marginHorizontal: 5 }}>Selected</Chip>
+</View>
+
+### Chip with Icon
+
+<IconsStyle />
+
+<View style={{ flexDirection: 'row', alignItems: 'center'}}>
+  <Chip icon="icon-bell" iconPosition="left"style={{ marginHorizontal: 5 }}>With left icon</Chip>
+  <Chip selected={true} icon="icon-bell" iconPosition="left" style={{ marginHorizontal: 5 }}>With left icon</Chip>
+  <Chip icon="icon-bell" iconPosition="right" style={{ marginHorizontal: 5 }}>With right icon</Chip>
+  <Chip selected={true} icon="icon-bell" iconPosition="right" style={{ marginHorizontal: 5 }}>With right icon</Chip>
+</View>
+
+## Props
+
+:::note
+Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props) props.
+:::
+
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                                                                                                         |
+| -------------- | -------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`        | `string`                                 |           | Text to display inside chip                                                                                                                        |
+| `selected`     | `boolean`                            |   `false`        | Show chip as selected or not                                                                                                                        |
+| `icon?`         | `bitcoin icon`                               |           | Displays an icon next to the chip text. By default, it appears on the left of the title. |
+| `iconPosition?` | `left` \| `right`                      | `left`    | Specifies on which side the icon appears with respect to the chip text.                                                                   |
+
+</div>
+
+## Playground
+
+You can play with this component here
+
+<div
+  data-snack-id="@rukundo/chip-example"
+  data-snack-platform="web"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+
+---
