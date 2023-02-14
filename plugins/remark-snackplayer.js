@@ -42,7 +42,7 @@ const processNode = (node, parent) => {
           },
         })
       );
-      const dependencies = params.dependencies || 'etta-ui';
+      const dependencies = params.dependencies || 'etta-ui@0.2.2';
       const platform = params.platform || 'web';
       const supportedPlatforms = params.supportedPlatforms || 'ios,android,web';
       const theme = params.theme || 'light';

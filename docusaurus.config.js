@@ -33,7 +33,9 @@ const config = {
     locales: ['en'],
   },
 
-  scripts: [{ src: '//snack.expo.io/embed.js', defer: true }],
+  scripts: [{ src: 'https://snack.expo.dev/embed.js', defer: true }],
+  plugins: ['./plugins/etta-web.js'],
+  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       'classic',
