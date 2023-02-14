@@ -1,0 +1,61 @@
+---
+title: Mnemonic Box
+path: /components/mnemonic-box/
+---
+
+import { IconsStyle } from '@site/src/components/BitcoinIcons';
+import { View } from 'react-native';
+import { MnemonicBox } from 'etta-ui';
+
+A numeric keypad. Great for inputing amounts and PIN entry.
+
+## How to use it
+
+```jsx
+import { MnemonicBox } from 'etta-ui';
+
+const mnemonic =
+  'yam flower delight seed cat note gritty pirate vault bean time loud';
+
+// Input container
+<MnemonicBox 
+    value="yam flower delight seed cat note gritty pirate vault bean time loud"
+    mode="INPUT"
+/>;
+
+// Readonly container
+<MnemonicBox 
+    value="yam flower delight seed cat note gritty pirate vault bean time loud"
+    mode="READONLY"
+/>;
+```
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                        |
+| -------------- | -------------------------------------- | --------- | ------------------------------------------------------------------ |
+| `value`     | `string`        |           | The seed phrase as a string separated by spaces. E.g from BDK           |
+| `mode` | `INPUT` \| `READONLY`            | Render mnemonic box as editable input container or Readonly seed container |
+| `onChangeText?`     | `function`: () => void          | Define what happens once seed is updated (INPUT mode) |
+
+</div>
+
+## Playground
+
+You can play with this component here. You will have better results with Expo Go on your own device.
+
+:::note
+This particular component will render better on Android or IOS. For best results, use Expo Go on your own device. 
+:::
+
+<div
+  data-snack-id="@rukundo/mnemonic-box-example"
+  data-snack-platform="ios"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+---
