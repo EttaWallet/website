@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('../src/fonts/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../src/fonts/Inter-Regular.ttf') format('truetype');
+}

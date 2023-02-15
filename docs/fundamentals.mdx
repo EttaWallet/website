@@ -4,8 +4,32 @@ path: /fundamentals/
 sidebar_position: 2
 ---
 
+import { IconsStyle } from '@site/src/components/BitcoinIcons';
+import { View, Text, TextStyle, ViewStyle } from 'react-native';
+import { TypographyPresets, Colors } from 'etta-ui';
+
 ## Colors
 
-## Fonts
+## TypographyPresets
+
+The default font family is Google font: Inter
+
+### Headings
+<View style={{ width: 1000 }}>
+    <Text style={[TypographyPresets.Header1, {marginBottom: 20, color: Colors.orange.base}]}>Heading 1</Text>
+    <Text style={[TypographyPresets.Header2, {marginBottom: 20, color: Colors.orange.base}]}>Heading 2</Text>
+    <Text style={[TypographyPresets.Header3, {marginBottom: 20, color: Colors.orange.base}]}>Heading 3</Text>
+    <Text style={[TypographyPresets.Header4, {marginBottom: 20, color: Colors.orange.base}]}>Heading 4</Text>
+    <Text style={[TypographyPresets.Header5, {marginBottom: 20, color: Colors.orange.base}]}>Heading 5</Text>
+</View>
+
+### Body
+<View style={{ width: 1000 }}>
+    <Text style={[TypographyPresets.Body1, {marginBottom: 20, color: Colors.orange.base}]}>Body 1</Text>
+    <Text style={[TypographyPresets.Body2, {marginBottom: 20, color: Colors.orange.base}]}>Body 2</Text>
+    <Text style={[TypographyPresets.Body3, {marginBottom: 20, color: Colors.orange.base}]}>Body 3</Text>
+    <Text style={[TypographyPresets.Body4, {marginBottom: 20, color: Colors.orange.base}]}>Body 4</Text>
+    <Text style={[TypographyPresets.Body5, {marginBottom: 20, color: Colors.orange.base}]}>Body 5</Text>
+</View>
 
 ## Icons
