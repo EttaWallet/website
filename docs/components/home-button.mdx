@@ -1,0 +1,77 @@
+---
+title: Home Button
+path: /components/home-button/
+---
+
+import { IconsStyle } from '@site/src/components/BitcoinIcons';
+import { View } from 'react-native';
+import { HomeButton } from 'etta-ui';
+
+Action buttons for your wallet's home screen.
+
+## How to use it
+
+```jsx
+import { HomeButton } from 'etta-ui';
+
+<HomeButton 
+    icon="icon-arrow-up"
+    onPress={() => 0}
+>
+Send
+</HomeButton>;
+
+```
+## Variations
+
+<IconsStyle />
+
+### Single
+
+<View style={{ flexDirection: 'row' }}>
+  <HomeButton icon="icon-arrow-up">Send</HomeButton>
+</View>
+
+### Grouped
+
+<View style={{ flexDirection: 'row' }}>
+    <HomeButton style={{ marginHorizontal: 8 }} icon="icon-arrow-up">
+        Send
+    </HomeButton>
+    <HomeButton style={{ marginHorizontal: 8 }} icon="icon-qr-code">
+        Scan
+    </HomeButton>
+    <HomeButton style={{ marginHorizontal: 8 }} icon="icon-arrow-down">
+        Receive
+    </HomeButton>
+</View>
+
+## Props
+
+:::note
+Includes all [TouchableOpacityProps](https://reactnative.dev/docs/touchableopacity#props) props. 
+:::
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                        |
+| -------------- | -------------------------------------- | --------- | ------------------------------------------------------------------ |
+| `children`     | `string`        |           | Title on the button  |
+| `icon`     | `bitcoin icon` |         | Icon to show above button text |
+
+</div>
+
+## Playground
+
+You can play with this component here. You will have better results with Expo Go on your own device.
+
+<div
+  data-snack-id="@rukundo/home-buttons-example"
+  data-snack-platform="web"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+
+---

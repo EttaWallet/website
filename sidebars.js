@@ -32,9 +32,11 @@ const sidebars = {
         'components/button', 
         'components/carousel', 
         'components/chip', 
+        'components/home-button', 
         'components/keypad', 
         'components/mnemonic-box', 
         'components/mnemonic-quiz', 
+        'components/modal', 
         'components/pagination'
       ],
       collapsed: false,

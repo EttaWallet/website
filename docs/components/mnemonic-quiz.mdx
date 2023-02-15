@@ -6,21 +6,19 @@ path: /components/mnemonic-quiz/
 import { View } from 'react-native';
 import { MnemonicQuiz } from 'etta-ui';
 
-A handy container for your Bitcoin seed phrase. Great for asking user to enter their seed phrase or to back it up manually
+This element will help you build a manual seed phrase backup component with validation
 
 ## How to use it
 
 ```jsx
 import { MnemonicQuiz } from 'etta-ui';
 
-// Input container
 <MnemonicQuiz 
     seed="yam flower delight seed cat note gritty pirate vault bean time loud"
     numMnemonicChoices={8}
     checkingDuration={1.8*1000}
     resetTitle="Start over"
 />;
-
 ```
 
 ## Preview
@@ -33,10 +31,6 @@ import { MnemonicQuiz } from 'etta-ui';
     resetTitle="Start over"
     />
 </View>
-
-### Readonly Container
-
-See playground below.
 
 ## Props
 

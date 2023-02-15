@@ -1,0 +1,88 @@
+---
+title: Modal
+path: /components/modal/
+---
+
+import { View } from 'react-native';
+import { Modal } from 'etta-ui';
+
+This element is an overlay above the app's content. It's great for showing prompts or informing users.
+
+## How to use it
+
+```jsx
+import { Modal } from 'etta-ui';
+
+<Modal
+    title="You have a lightning invoice on your clipboard"
+    message="Would you like to use this invoice for a transaction?"
+    actionButton={{
+        title: "Okay",
+        onPress: () => 0,
+    }}
+    cancelButton={{
+        title: "Cancel",
+        onPress: () => 0,
+    }}
+/>;
+```
+
+## Variations
+
+### One action button
+
+<View>
+    <Modal
+        title="Incoming on-chain transaction"
+        message="To save on the currently high fees, these funds will become available in about 2-3 hours."
+        actionButton={{
+            title: "Okay",
+            onPress: () => 0,
+        }}
+    />
+</View>
+
+### With cancel button
+
+<View>
+    <Modal
+        title="You have a lightning invoice on your clipboard"
+        message="Would you like to use this invoice for a transaction?"
+        actionButton={{
+            title: "Okay",
+            onPress: () => 0,
+        }}
+        cancelButton={{
+            title: "Cancel",
+            onPress: () => 0,
+        }}
+    />
+</View>
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                        |
+| -------------- | ---------------------- | --------- | ------------------------------------------------------------------ |
+| `title`        | string                 |           | Heading on the modal   |
+| `message`      | string |           | Descriptive text below the heading on the modal |
+| `actionButton` | {title: `string`, onPress: `() => void`} |           | Action button title and function to be carried out when pressed |
+| `cancelButton` | {title: `string`, onPress: `() => void`} |           | Cancel button title and function to be carried out when pressed |
+
+</div>
+
+## Playground
+
+You can play with this component here. For best results, use Expo Go on your own device. 
+
+<div
+  data-snack-id="@rukundo/modal-example"
+  data-snack-platform="web"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+
+---
