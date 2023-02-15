@@ -28,7 +28,15 @@ const sidebars = {
     {
       type: 'category',
       label: 'Components',
-      items: ['components/button', 'components/carousel', 'components/chip', 'components/keypad', 'components/mnemonic-box', 'components/pagination'],
+      items: [
+        'components/button', 
+        'components/carousel', 
+        'components/chip', 
+        'components/keypad', 
+        'components/mnemonic-box', 
+        'components/mnemonic-quiz', 
+        'components/pagination'
+      ],
       collapsed: false,
     },
   ],

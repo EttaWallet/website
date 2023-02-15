@@ -1,0 +1,72 @@
+---
+title: Mnemonic Quiz
+path: /components/mnemonic-quiz/
+---
+
+import { View } from 'react-native';
+import { MnemonicQuiz } from 'etta-ui';
+
+A handy container for your Bitcoin seed phrase. Great for asking user to enter their seed phrase or to back it up manually
+
+## How to use it
+
+```jsx
+import { MnemonicQuiz } from 'etta-ui';
+
+// Input container
+<MnemonicQuiz 
+    seed="yam flower delight seed cat note gritty pirate vault bean time loud"
+    numMnemonicChoices={8}
+    checkingDuration={1.8*1000}
+    resetTitle="Start over"
+/>;
+
+```
+
+## Preview
+
+<View style={{ flexDirection: 'row', alignItems: 'center'}}>
+    <MnemonicQuiz 
+    seed="yam flower delight seed cat note gritty pirate vault bean time loud"
+    numMnemonicChoices={8}
+    checkingDuration={1.8*1000}
+    resetTitle="Start over"
+    />
+</View>
+
+### Readonly Container
+
+See playground below.
+
+## Props
+
+<div className='table-responsive'>
+
+| Name           | Type                                   | Default   | Description                                                        |
+| -------------- | -------------------------------------- | --------- | ------------------------------------------------------------------ |
+| `seed`     | `string`        |           | The seed phrase as a string separated by spaces. E.g from BDK  |
+| `numMnemonicChoices`     | `number`        |     6      | Number of mnemonic word choices to show in quiz  |
+| `checkingDuration`     | `number`        |     1.8 * 1000      | Manual delay period for validating mnemonic  |
+| `onPassed?`     | `function`: () => void          | Define what happens when user passes quiz |
+| `onFail?`     | `function`: () => void          | Define what happens when user fails quiz |
+| `resetTitle`     | `string` |          | Button title to reset quiz |
+
+</div>
+
+## Playground
+
+You can play with this component here. You will have better results with Expo Go on your own device.
+
+:::note
+This particular component will render better on Android or IOS. For best results, use Expo Go on your own device. 
+:::
+
+<div
+  data-snack-id="@rukundo/mnemonic-quiz-example"
+  data-snack-platform="ios"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
+---
