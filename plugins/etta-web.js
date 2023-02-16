@@ -21,10 +21,10 @@ const a = function () {
         module: {
           rules: [
             {
-              test: /\.(jpg|png|woff|woff2|eot|svg)$/,
+              test: /\.(jpg|png|woff|woff2|ttf|svg)$/,
               use: [
                 {
-                  loader: 'file-loader',
+                  loader: 'url-loader',
                 },
               ],
             },

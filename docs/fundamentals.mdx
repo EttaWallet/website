@@ -4,32 +4,74 @@ path: /fundamentals/
 sidebar_position: 2
 ---
 
-import { IconsStyle } from '@site/src/components/BitcoinIcons';
-import { View, Text, TextStyle, ViewStyle } from 'react-native';
+These are some of the design tokens used across the Bitcoin Design Guide. You can find them here: [https://www.bitcoinuikit.com/foundation](https://www.bitcoinuikit.com/foundation).
+This section will only cover how to use them.
+
+## Typography Presets and Colors
+
+You can use the presets and colors in any StyleSheet component or apply it directly inline within your `style` prop. See below
+
+### How to use it
+
+```jsx
+import { StyleSheet, Text, View } from 'react-native',
 import { TypographyPresets, Colors } from 'etta-ui';
 
-## Colors
-
-## TypographyPresets
-
-The default font family is Google font: Inter
-
-### Headings
-<View style={{ width: 1000 }}>
-    <Text style={[TypographyPresets.Header1, {marginBottom: 20, color: Colors.orange.base}]}>Heading 1</Text>
-    <Text style={[TypographyPresets.Header2, {marginBottom: 20, color: Colors.orange.base}]}>Heading 2</Text>
-    <Text style={[TypographyPresets.Header3, {marginBottom: 20, color: Colors.orange.base}]}>Heading 3</Text>
-    <Text style={[TypographyPresets.Header4, {marginBottom: 20, color: Colors.orange.base}]}>Heading 4</Text>
-    <Text style={[TypographyPresets.Header5, {marginBottom: 20, color: Colors.orange.base}]}>Heading 5</Text>
+<View>
+    <Text style={styles.title}>This is a title</Text>
+    <Text style={styles.text}>Paragraph text</Text>
+    <Text style={{...TypographyPresets.Body3, color: Colors.red.base}}>Paragraph text</Text>
 </View>
 
-### Body
-<View style={{ width: 1000 }}>
-    <Text style={[TypographyPresets.Body1, {marginBottom: 20, color: Colors.orange.base}]}>Body 1</Text>
-    <Text style={[TypographyPresets.Body2, {marginBottom: 20, color: Colors.orange.base}]}>Body 2</Text>
-    <Text style={[TypographyPresets.Body3, {marginBottom: 20, color: Colors.orange.base}]}>Body 3</Text>
-    <Text style={[TypographyPresets.Body4, {marginBottom: 20, color: Colors.orange.base}]}>Body 4</Text>
-    <Text style={[TypographyPresets.Body5, {marginBottom: 20, color: Colors.orange.base}]}>Body 5</Text>
-</View>
+const styles = StyleSheet.create({
+  title: {
+    ...TypographyPresets.Header2,
+    color: Colors.orange.base,
+  },
+  text: {
+    ...TypographyPresets.Header2,
+    color: Colors.common.black,
+  },
+});
+````
+
+### Preview
+
+<div
+  data-snack-id="@rukundo/typography-and-colours-example"
+  data-snack-platform="android"
+  data-snack-preview="true"
+  data-snack-theme="light"
+  data-snack-loading="lazy"
+  className="snack-player">
+</div>
 
 ## Icons
+
+The Bitcoin Design Community has created a couple of icons that work well with this guide, you can find them here: [https://bitcoinicons.com](https://bitcoinicons.com).
+
+I created a native-friendly library on top of this here: [https://github.com/EttaWallet/rn-bitcoin-icons](https://github.com/EttaWallet/rn-bitcoin-icons).
+
+You can use these icons with our `<Icon>` component. The only prop you need is `name`. See how to use it below. 
+
+You can also use the icons in any of the etta-ui components with an `icon?` prop. 
+
+### How to use it
+
+```jsx
+import { Icon, Button } from 'etta-ui';
+
+// Each icon is prefixed with `icon-`. Outline icons are have an extra suffix `-2`.
+
+// Filled icon
+<Icon name="icon-alert" />;
+
+// Outline icon
+<Icon name="icon-alert-2" />;
+
+// Inside a <Button>
+<Button title="Icon on the right" icon="icon-arrow-right" iconPosition="right" />
+
+// Inside a <Chip>
+<Chip selected={true} icon="icon-bell" iconPosition="right" style={{ marginHorizontal: 5 }}>With right icon</Chip>
+```
