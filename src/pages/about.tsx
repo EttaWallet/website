@@ -5,14 +5,18 @@ import Hero from '../components/Hero';
 
 import '../../static/css/components.css';
 
-const Home: React.FunctionComponent<{}> = () => {
+const About: React.FunctionComponent<{}> = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
     <Layout>
-      <Hero />
+      <div className='container'>
+        <div className="row padding-vert--md" style={{ alignItems: 'center' }}>
+          <p className=''>Coming soon</p>
+        </div>
+      </div>
     </Layout>
   );
 }
 
-export default Home;
+export default About;

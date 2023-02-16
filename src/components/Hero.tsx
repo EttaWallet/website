@@ -31,7 +31,7 @@ const Home: React.FunctionComponent<{}> = () => {
                 <span className="gradient clip-text">Lightning</span> wallet
               </h1>
               <p className="">
-                A working implementation of the Daily Spending Wallet.
+                A working open-source implementation of the Daily Spending Wallet.
               </p>
               <div>
               <Link

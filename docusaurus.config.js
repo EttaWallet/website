@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'EttaWallet UI Library',
+  title: 'EttaWallet',
   tagline:
-    'Open-source, opinionated React Native component library for building quality, beautiful, accessible bitcoin apps',
+    'An open-source lightning wallet',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,7 +20,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'EttaWallet', // Usually your GitHub org/user name.
-  projectName: 'etta-ui', // Usually your repo name.
+  projectName: 'EttaWallet', // Usually your repo name.
 
   baseUrlIssueBanner: false,
   trailingSlash: false,
