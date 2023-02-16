@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/EttaWallet"
   },
   "copyright": {
-    "message": "Built with the <a target=\"_blank\" href='https://bitcoin.design'>Bitcoin Design Guide</a>.",
+    "message": "Built by <a target=\"_blank\" href='https://twitter.com/rukundo__'>@rukundo__</a> with the <a target=\"_blank\" href='https://bitcoin.design'>Bitcoin Design Guide</a>.",
     "description": "The footer copyright"
   }
 }
