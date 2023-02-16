@@ -41,7 +41,7 @@
 }
 
 .gradient {
-  background: linear-gradient(120deg, var(--ifm-color-primary), #00a2ff);
+  background: linear-gradient(120deg, #6638f0, var(--ifm-color-primary));
 }
 
 .gradient.clip-text {
@@ -122,6 +122,7 @@
   .hero__title {
     margin-top: 2rem;
     font-size: 2.5rem;
+    text-align: center;
   }
   .hero .row {
     flex-direction: column;

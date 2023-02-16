@@ -76,14 +76,14 @@ const config = {
         title: 'EttaWallet',
         logo: {
           alt: 'EttaWallet Logo',
-          src: 'img/logo.svg',
+          src: 'img/bitcoin-logo.png',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'UI Kit',
+            label: 'Components',
           },
           {
             to: 'about',

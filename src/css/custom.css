@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #f7931A;
+  --ifm-color-primary-dark: #ed8608;
+  --ifm-color-primary-darker: #e07e08;
+  --ifm-color-primary-darkest: #b96806;
+  --ifm-color-primary-light: #f89f34;
+  --ifm-color-primary-lighter: #f8a642;
+  --ifm-color-primary-lightest: #fab869;
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -15,13 +15,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #f89b2a;
+  --ifm-color-primary-dark: #f78e0e;
+  --ifm-color-primary-darker: #ef8608;
+  --ifm-color-primary-darkest: #c56f06;
+  --ifm-color-primary-light: #f9a846;
+  --ifm-color-primary-lighter: #f9af54;
+  --ifm-color-primary-lightest: #f9af54;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
