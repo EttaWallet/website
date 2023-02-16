@@ -22,41 +22,44 @@ const config = {
   organizationName: 'EttaWallet', // Usually your GitHub org/user name.
   projectName: 'etta-ui', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  baseUrlIssueBanner: false,
+  trailingSlash: false,
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+    },
   },
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+  onDuplicateRoutes: 'warn',
+  staticDirectories: ['static'],
 
   scripts: [{ src: 'https://snack.expo.dev/embed.js', defer: true }],
   plugins: ['./plugins/etta-web.js'],
-  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: 'docs',
+          path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/EttaWallet/website/edit/main',
 
           remarkPlugins: [require('./plugins/remark-snackplayer')],
+          lastVersion: 'current',
+          onlyIncludeVersions: ['current'],
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -70,7 +73,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'EttaUI',
+        title: 'EttaWallet',
         logo: {
           alt: 'EttaWallet Logo',
           src: 'img/logo.svg',
@@ -87,53 +90,19 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Components',
-                to: '/docs/intro',
-              },
-            ],
+            href: 'https://twitter.com/ettawallet',
+            label: 'Twitter',
+            position: 'right',
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
+            href: 'https://bitcoin.design',
+            label: 'Bitcoin Design Guide',
+            position: 'right',
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} EttaWallet, Inc. Built with Docusaurus.`,
       },
+      footer: {},
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "EttaUI",
+    "description": "The title in the navbar"
+  },
+  "item.label.Components": {
+    "message": "Components",
+    "description": "Navbar item with label Components"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Navbar item with label Twitter"
+  },
+  "item.label.Bitcoin Design Guide": {
+    "message": "Bitcoin Design Guide",
+    "description": "Navbar item with label Bitcoin Design Guide"
+  }
+}
