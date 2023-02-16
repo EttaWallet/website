@@ -1,10 +1,13 @@
 ---
 title: Introduction
 ---
+import Features from '../src/components/Features';
 
 ## What?
 
-EttaUI is an open-source, opinionated React Native component library for building quality, beautiful, accessible bitcoin apps. The components here are inspired by and built on the work of the **[Bitcoin Design Community](https://bitcoin.design)** whose [guide](https://bitcoin.design/guide/) informs and influences the user experience across multiple bitcoin projects. They are awesome!
+This design kit is an open-source, opinionated React Native component library for building quality, beautiful, accessible bitcoin apps. The components here are inspired by and built on the work of the **[Bitcoin Design Community](https://bitcoin.design)** whose [guide](https://bitcoin.design/guide/) informs and influences the user experience across multiple bitcoin projects. They are awesome!
+
+<Features />
 
 ## Why?
 

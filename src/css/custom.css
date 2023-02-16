@@ -35,3 +35,37 @@
   border: 1px solid var(--ifm-table-border-color);
   border-radius: var(--ifm-global-radius);
 }
+
+/**
+Card
+*/
+a.card {
+  text-decoration: none !important;
+  color: var(--ifm-color-content);
+  box-shadow: none !important;
+  border: 1px solid var(--ifm-color-primary-contrast-background);
+  display: flex;
+  font-size: 0.8rem;
+}
+a.card .card__body {
+  flex: 1;
+  flex-grow: 1;
+}
+a.card:hover {
+  transition: all 0.2s ease;
+  border: 1px solid var(--ifm-color-primary);
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1),
+    0 0 0 1px var(--ifm-color-primary) !important;
+}
+
+.row.is-multiline .col {
+  margin-top: var(--ifm-spacing-horizontal) !important;
+  margin-bottom: var(--ifm-spacing-horizontal) !important;
+}
+@media screen and (max-width: 996px) {
+}
+
+.inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+}

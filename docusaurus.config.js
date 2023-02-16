@@ -83,7 +83,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Components',
+            label: 'UI Kit',
+          },
+          {
+            to: 'about',
+            position: 'left',
+            label: 'About',
           },
           {
             href: 'https://github.com/EttaWallet',
