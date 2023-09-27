@@ -91,3 +91,7 @@ a.card:hover {
     margin-right: 0 !important;
   }
 }
+
+[data-theme='dark'] .btcpay-input-price, .plus-minus {
+  color: #000!important;
+}
