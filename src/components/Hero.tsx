@@ -53,6 +53,9 @@ const Home: React.FunctionComponent<{}> = () => {
                   <img src="img/play.svg" height="50" />
                 </Link>
               </div>
+              <div>
+                <p>⚠️ This project is still in open beta. </p>
+              </div>
               <div className="ball" style={{ left: 80, top: '20%' }}>
                 <SiReact />
               </div>
