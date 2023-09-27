@@ -79,7 +79,7 @@ const Donate: React.FunctionComponent<{}> = () => {
                     <div class="btcpay-custom-container">
                         <div class="btcpay-custom">
                         <button class="plus-minus" type="button" data-type="-" data-step="10" data-min="10" data-max="10000">-</button>
-                        <input class="btcpay-input-price" type="number" name="price" min="10" max="10000" step="10" value="10" data-price="10" style="width: 3em;" />
+                        <input class="btcpay-input-price" type="number" name="price" min="10" max="10000" step="10" value="10" data-price="10" style="width: 5em;" />
                         <button class="plus-minus" type="button" data-type="+" data-step="10" data-min="10" data-max="10000">+</button>
                         </div>
                         <select name="currency">
