@@ -94,6 +94,7 @@ const Donate: React.FunctionComponent<{}> = () => {
                 `,
             }} 
             />
+            <p className='padding-top--md'>Or use LNURL: donate@bps.ettawallet.app</p>
             <div className='margin-vert--lg' style={{width: '100%', height: 1, backgroundColor: '#f2f2f2'}} />
             <div className='intro margin-top--xs'>
                 <p>Want to support development another way? You can shoot an email to rukundocollin@gmail.com</p>
