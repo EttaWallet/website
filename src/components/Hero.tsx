@@ -17,40 +17,41 @@ const Home: React.FunctionComponent<{}> = () => {
   return (
     <section>
       <header>
-        <div className="container  padding-vert--xl">
+        <div className="container padding-vert--xl">
           <div
-            className="row padding-vert--md"
+            className="row"
             style={{ alignItems: 'center' }}
           >
             <div className="col col--6">
-              <img src="/img/wallet.png" />
+              <img src="/img/etta-preview.png" />
             </div>
-            <div className="col col--5 col--offset-1">
+            <div className="col col--6 summary">
               <h1 className="hero__title">
-                Open source <br />
-                <span className="gradient clip-text">Lightning</span> wallet
+                <span className="gradient clip-text">EttaWallet</span>
               </h1>
               <p className="">
-                A working open-source implementation of the Daily Spending Wallet.
+              A simple open-source non-custodial bitcoin/lightning wallet with a strong bias towards usability, accessibility and pretty good UX.
               </p>
               <div>
               <Link
-                  className={
-                    'button button--primary margin-vert--sm heroButton margin-right--md '
-                  }
                   to={'https://github.com/EttaWallet/EttaWallet'}
                 >
-                  GitHub
+                  Explore project on Github. 100% open source.
+                </Link>
+              </div>
+              <div className='margin-top--lg'>
+              <Link
+                  to={'https://testflight.apple.com/join/vZaHZIi4'}
+                  className={'padding-right--xs'}
+                >
+                  <img src="img/app_store.svg" height="50" />
                 </Link>
                 <Link
-                  className={
-                    'button button--secondary button--outline margin-vert--sm margin-right--md '
-                  }
-                  style={{ color: 'black' }}
-                  to={useBaseUrl('/docs/intro')}
-                >Explore UI components
+                  to={'https://play.google.com/store/apps/details?id=com.ettaln'}
+                  className={'padding-right--xs'}
+                >
+                  <img src="img/play.svg" height="50" />
                 </Link>
-
               </div>
               <div className="ball" style={{ left: 80, top: '20%' }}>
                 <SiReact />

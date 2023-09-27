@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 
 import '../../static/css/components.css';
 
-const About: React.FunctionComponent<{}> = () => {
+const PrivacyPolicy: React.FunctionComponent<{}> = () => {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
@@ -27,4 +27,4 @@ const About: React.FunctionComponent<{}> = () => {
   );
 }
 
-export default About;
+export default PrivacyPolicy;

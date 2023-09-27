@@ -9,7 +9,7 @@ const config = {
   title: 'EttaWallet',
   tagline:
     'An open-source lightning wallet',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: 'https://ettawallet.app',
@@ -71,12 +71,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/etta-preview.png',
       navbar: {
+        style: 'dark',
         title: 'EttaWallet',
         logo: {
           alt: 'EttaWallet Logo',
-          src: 'img/bitcoin-logo.png',
+          src: 'img/logo_white.png',
+          srcDark: 'img/logo_white.png',
         },
         items: [
           {
@@ -89,6 +91,12 @@ const config = {
             to: 'about',
             position: 'left',
             label: 'About',
+          },
+          {
+            href: 'donate',
+            label: 'Donate ❤️',
+            position: 'right',
+            className: 'button button--primary textWhite'
           },
           {
             href: 'https://github.com/EttaWallet',

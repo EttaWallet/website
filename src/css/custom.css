@@ -69,3 +69,25 @@ a.card:hover {
   display: inline-flex;
   align-items: center;
 }
+
+.textWhite {
+  color: #ffffff!important;
+}
+
+/** In mobile view, reduce the padding */
+@media screen and (max-width: 996px) {
+  .summary {
+    text-align: center;
+  }
+}
+
+/* Custom CSS to move hamburger menu to the right */
+@media (max-width: 996px) {
+  .navbar__items {
+    flex-direction: row-reverse;
+  }
+  .navbar__toggle {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+}
